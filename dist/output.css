@@ -741,6 +741,7 @@ video {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  gap: 1rem;
   border-radius: 0.75rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -762,8 +763,9 @@ video {
 }
 
 #grid-of-books {
+  margin: 1.5rem;
+  margin-top: 2.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 10px;
-  margin: 20px;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
