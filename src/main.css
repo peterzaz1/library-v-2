@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card {
+  @apply bg-white shadow-xl p-8 flex flex-col justify-around items-center h-52 text-xl rounded-xl;
+}
+
+.btn {
+  @apply px-3 p-1 rounded-md text-lg;
+}
+
+#grid-of-books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  margin: 20px;
+}
