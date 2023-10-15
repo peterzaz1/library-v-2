@@ -3,6 +3,7 @@ const gridOfBooks = document.querySelector("#grid-of-books");
 const form = document.querySelector("#form");
 const formContiner = document.querySelector("#form-cont");
 const submitButton = document.querySelector("#submit");
+const cancelButton = document.querySelector("#cancel");
 
 const booksList = [];
 
@@ -29,9 +30,11 @@ function Book(arr) {
   if (arr[3] == undefined) {
     readButton.textContent = "Not read";
     readButton.classList.add("bg-red-300");
+    readButton.classList.add("hover:bg-red-400");
   } else {
     readButton.textContent = "Read";
     readButton.classList.add("bg-green-300");
+    readButton.classList.add("hover:bg-green-400");
   }
 
   readButton.classList.add("btn");
@@ -41,11 +44,15 @@ function Book(arr) {
     if (readButton.textContent == "Read") {
       readButton.textContent = "Not read";
       readButton.classList.remove("bg-green-300");
+      readButton.classList.remove("hover:bg-green-400");
       readButton.classList.add("bg-red-300");
+      readButton.classList.add("hover:bg-red-400");
     } else {
       readButton.textContent = "Read";
       readButton.classList.remove("bg-red-300");
+      readButton.classList.remove("hover:bg-red-400");
       readButton.classList.add("bg-green-300");
+      readButton.classList.add("hover:bg-green-400");
     }
   });
 
@@ -75,4 +82,8 @@ submitButton.addEventListener("click", (e) => {
   gridOfBooks.innerHTML = "";
 
   displayBooks();
+});
+
+cancelButton.addEventListener("click", () => {
+  formContiner.classList.add("hidden");
 });

@@ -7,7 +7,7 @@
 }
 
 .btn {
-  @apply px-3 p-1 rounded-md text-lg;
+  @apply px-3 p-1 rounded-md text-lg shadow-md;
 }
 
 #grid-of-books {
